@@ -1,0 +1,138 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    overflow-x: hidden;
+}
+.header{
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    justify-content: left;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    height: 10vh;
+    width: 100vw;
+}
+.header .div_logo{
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center;
+    
+    color: white;
+    width: 20vw;
+    line-height: 0.2;
+}
+.logo_romaji{
+    font-size: 20px;
+    
+}
+.header ul{
+    margin-left: 30vw;
+    display: flex;
+    justify-content: space-around;
+    width: 40vw;
+
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+/* HOME */
+.container{
+    height: 100vh;
+    width: 100vw;
+}
+
+.banner-home{
+    width: 100%;
+    height: 100%;
+    background-image: url("galeria/chihiro-opacidade.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+.ma-kanji{
+    margin-top: 30vh;
+    margin-left: 5vw;
+    padding-bottom: 0%;
+    width: 50vw;
+    height: 30vh;
+    color: white;
+    font-size: 150px;
+}
+.romaji{
+    margin-left: 20vw;
+    font-size: 50px;
+    color: white; 
+}
+.subtitulo{
+    
+    margin-left: 10vw;
+    width: 50vw;
+    color: white;
+    font-size: 30px;
+}
+/* SOBRE */
+.banner-sobre{
+    height: 100vh;
+    width: 100vw;
+    background-color: #92b676;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-evenly;
+    background-image: url("galeria/arietty.jpg");
+    background-size: cover;
+
+}
+.div_sobre-info{
+    margin-left: 5vw;
+    margin-top: 10vh;
+    height: 70vh;
+    width: 60vw;
+    background-color: #58345b;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+}
+.div_sobre-titulo{
+    margin-top: 5vh;
+    font-size: 30px;
+    height: 10vh;
+    width: 50vw;
+    color: white;
+}
+.div_sobre-texto{
+    height: 70vh;
+    width: 50vw;
+    font-size: 20px;
+    color: white;   
+
+}
+/* ESTUDIO */
+.banner-estudio{
+    height: 100vh;
+    background-image: url("galeria/totoro.jpg");
+    background-size: cover;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+.historia-texto{
+    margin-top: 20vh;
+    margin-left: 5vw;
+    height: 50vh;
+    width: 40vw;
+    color: white;
+}
+.estudio-logo{
+    font-size: 40px;
+}

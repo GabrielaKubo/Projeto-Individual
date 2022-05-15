@@ -1,0 +1,114 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    overflow-x: hidden;
+}
+.header{
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    justify-content: left;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    height: 10vh;
+    width: 100vw;
+}
+.header .div_logo{
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    width: 20vw;
+    line-height: 0.2;
+}
+.japones-logo{
+    color: white;
+}
+.logo_romaji{
+    font-size: 20px;
+    color: white;
+    
+}
+.header ul{
+    margin-left: 30vw;
+    display: flex;
+    justify-content: space-around;
+    width: 40vw;
+
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+/* CADASTRO */
+.banner-cadastro{
+    height: 100vh;
+    width: 100vw;
+    background-image: url("galeria/howl.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cadastro-card{
+    height: 70vh;
+    width: 30vw;
+    border: 2px solid #51a7b6;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #51a7b6;
+}
+.foto-cadastro{
+    height: 20vh;
+    
+    margin-bottom: 15vh;
+   
+}
+h1{
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    
+}
+p{
+    color: white;
+    font-size: 25px;
+    font-family: 'Quicksand', sans-serif;
+    line-height: 0.1;
+}
+.cadastro-end{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    width: 30vw;
+    height: 15vh;
+}
+.btn_cadastro{
+   margin-left: 10vw;
+   margin-bottom: 10vh;
+   border-radius: 40px;
+   border: 1px solid #abbe6c;
+    height: 8vh;
+    width: 10vw;
+    font-size: 20px;
+    transition-duration: 0.4s;
+}
+.btn_cadastro:hover{
+    background-color: #abbe6c;
+    color: white;
+}
+input{
+    display: flex;
+    font-size: 15px;
+}

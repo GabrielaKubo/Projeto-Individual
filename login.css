@@ -1,0 +1,93 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    overflow-x: hidden;
+}
+.header{
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    justify-content: left;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    height: 10vh;
+    width: 100vw;
+}
+.header .div_logo{
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    width: 20vw;
+    line-height: 0.2;
+}
+.japones-logo{
+    color: white;
+}
+.logo_romaji{
+    font-size: 20px;
+    color: white;
+    
+}
+.header ul{
+    margin-left: 30vw;
+    display: flex;
+    justify-content: space-around;
+    width: 40vw;
+
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+/* LOGIN */
+.banner-login{
+    height: 100vh;
+    width: 100vw;
+    background-image: url("galeria/ponte.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-login{
+    height: 50vh;
+    width: 20vw;
+    border-radius: 40px;
+    background-color: rgba(0, 0, 0, 0.753);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+h1{
+    color: white;
+}
+p{
+    color: white;
+    font-size: 25px;
+    font-family: 'Quicksand', sans-serif;
+    line-height: 0.1;
+}
+.btn_login{
+    margin-bottom: 5vh;
+    border-radius: 40px;
+    border: 1px solid #3d493f;
+     height: 8vh;
+     width: 10vw;
+     font-size: 20px;
+     transition-duration: 0.4s;
+ }
+ .btn_login:hover{
+     background-color: #abbe6c;
+     color: white;
+ }
