@@ -56,6 +56,7 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 .cadastro-card{
     height: 70vh;
@@ -112,3 +113,16 @@ input{
     display: flex;
     font-size: 15px;
 }
+.erro_card{
+   padding: 20px;
+    font-size: 15px;
+    background-color: black;
+    border: 2px solid red;
+    color: white;
+    border-radius: 40px;
+}
+.erro_card #erro{
+    font-weight: 500;
+    font-size: 20px;
+    margin: 10px;
+  }
