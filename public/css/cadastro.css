@@ -14,13 +14,12 @@ body{
     height: 10vh;
     width: 100vw;
 }
-.header .div_logo{
+.div_logo{
     display: flex;
-    
     flex-direction: column;
     align-items: center;
     color: white;
-    width: 20vw;
+    width: 20%;
     line-height: 0.2;
 }
 .japones-logo{
@@ -29,7 +28,6 @@ body{
 .logo_romaji{
     font-size: 20px;
     color: white;
-    
 }
 .header ul{
     margin-left: 30vw;
@@ -59,8 +57,8 @@ a{
     flex-direction: column;
 }
 .cadastro-card{
-    height: 70vh;
-    width: 30vw;
+    height: 80%;
+    width: 30%;
     border: 2px solid #51a7b6;
     border-radius: 40px;
     display: flex;
