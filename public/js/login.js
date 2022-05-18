@@ -53,11 +53,11 @@ function validarSessao() {
     var nome = sessionStorage.NOME_USUARIO;
 
     var h1Titulo = document.getElementById("h1_titulo");
-
+    
     if (login != null && nome != null) {
         // window.alert(`Seja bem-vindo, ${nome}!`);
         h1Titulo.innerHTML = `${login}`;
-
+        nome.innerHTML = `${nome}`
         finalizarAguardar();
     } else {
         window.location = "login.html";

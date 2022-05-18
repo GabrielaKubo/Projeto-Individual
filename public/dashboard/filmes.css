@@ -1,0 +1,176 @@
+body{
+    margin: 0;
+    padding: 0;
+    
+}
+.Container{
+    height: 200vh;
+    width: 100vw;
+    background-color: aquamarine;
+    display: flex;
+}
+.Banner_user{
+    height: 100%;
+    width: 15vw;
+    background-color: red;
+}
+.Conteudo{
+    height: 100%;
+    width: 85vw;
+    background-color: blueviolet;
+}
+.Conteudo .linha1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    height: 40vh;
+    width: 100%;
+    background-color: blue;
+}
+.card_nausicaa{
+    height: 80%;
+    width: 15%;
+    background-color: aqua;
+}
+.card_laputa{
+    height: 80%;
+    width: 15%;
+    background-color: green;
+}
+.card_totoro{
+    height: 80%;
+    width: 15%;
+    background-color: aqua;
+}
+.card_vagalumes{
+    height: 80%;
+    width: 15%;
+    background-color: green;
+}
+.card_kiki{
+    height: 80%;
+    width: 15%;
+    background-color: aqua;
+}
+.card_memorias{
+    height: 80%;
+    width: 15%;
+    background-color: green;
+}
+.linha2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    height: 40vh;
+    width: 100%;
+    background-color: green;
+}
+.card_porco{
+    height: 80%;
+    width: 15%;
+    background-color: yellow;
+}
+.card_oceano{
+    height: 80%;
+    width: 15%;
+    background-color: aqua;
+}
+.card_pompoko{
+    height: 80%;
+    width: 15%;
+    background-color: yellow;
+}
+.card_sussurros{
+    height: 80%;
+    width: 15%;
+    background-color: aqua;
+}
+.card_mononoke{
+    height: 80%;
+    width: 15%;
+    background-color: yellow;
+}
+.card_yamada{
+    height: 80%;
+    width: 15%;
+    background-color: aqua;
+}
+.linha3{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    height: 40vh;
+    width: 100%;
+    background-color: yellow;
+}
+.card_chihiro{
+    height: 80%;
+    width: 15%;
+    background-color: violet;
+}
+.card_gatos{
+    height: 80%;
+    width: 15%;
+    background-color:  deepskyblue;
+}
+.card_castelo_animado{
+    height: 80%;
+    width: 15%;
+    background-color: violet;
+}
+.card_terramar{
+    height: 80%;
+    width: 15%;
+    background-color: deepskyblue;
+}
+.card_ponyo{
+    height: 80%;
+    width: 15%;
+    background-color: violet;
+}
+.card_arietty{
+    height: 80%;
+    width: 15%;
+    background-color: deepskyblue;
+}
+.linha4{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    height: 40vh;
+    width: 100%;
+    background-color: pink;
+}
+.card_colina{
+    height: 80%;
+    width: 15%;
+    background-color: red;
+}
+.card_vidas_ao_vento{
+    height: 80%;
+    width: 15%;
+    background-color: violet;
+}
+.card_kaguya{
+    height: 80%;
+    width: 15%;
+    background-color: red;
+}
+.card_marnie{
+    height: 80%;
+    width: 15%;
+    background-color: violet;
+}
+.card_aya{
+    height: 80%;
+    width: 15%;
+    background-color: red;
+}
