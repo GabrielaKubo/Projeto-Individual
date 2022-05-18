@@ -27,7 +27,6 @@
         </ul>
     </div>
     <div class="banner-login">
-        <div id="erroCadastro" class="ERRO-cadastro"></div>
         <div class="card-login">
             <h1>Login</h1>
             <p>E-mail:</p> 
@@ -36,6 +35,7 @@
             <input type="password" id="ipt_login_senha" class="login_senha" placeholder="Insira sua senha"> <br>
             <button onclick="entrar()" class="btn_login">Entrar</button>
         </div>
+        <div id="erro_login" class="erro-login" style="display: none;"></div>
     </div>
 </body>
 </html>
@@ -43,13 +43,12 @@
     function entrar(){
         var emailVar = ipt_login_email.value;
         var senhaVar = ipt_login_senha.value;
-        if(emailVar == " " || senhaVar == " "){
-            alert('Por favor preencha todos os campos corretamente')
-        }else{
-            
-        }
-        if(emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1){
-            alert('Email inválido')
+        if(emailVar == "" || senhaVar == ""){
+            erro_login.style.display = 'block';
+            erro_login.innerHTML = `Por favor preencha todos os campos corretamente`
+        }else if(emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1){
+            erro_login.style.display = 'block';
+            erro_login.innerHTML = `Email inválido`
         }
         console.log("FORM LOGIN: ", emailVar);
         console.log("FORM SENHA: ", senhaVar);
@@ -99,4 +98,5 @@
 
         return false;
     }
+
 </script>

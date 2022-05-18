@@ -56,6 +56,7 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 .card-login{
     height: 50vh;
@@ -91,3 +92,16 @@ p{
      background-color: #abbe6c;
      color: white;
  }
+ .erro-login{
+    padding: 20px;
+     font-size: 15px;
+     background-color: black;
+     border: 2px solid red;
+     color: white;
+     border-radius: 40px;
+ }
+ .erro-login #erro_login{
+     font-weight: 500;
+     font-size: 20px;
+     margin: 10px;
+   }

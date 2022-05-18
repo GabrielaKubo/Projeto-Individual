@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <script src="js/textosIndex.js"></script>
 </head>
 <body>
     
@@ -28,34 +29,35 @@
                 </ul>
         </div>
         <div id="home" class="banner-home">
-            <div class="ma-kanji">ジブリと間 </div>
-            <div class="romaji">Ghibli & MA</div>
-            <div class="subtitulo">A reminiscência de som que antecede o silêncio.</div>
+            <div id="home_Kanji" class="ma-kanji"> </div>
+            <div id="home_Romaji" class="romaji"></div>
+            <div id="home_subtitulo" class="subtitulo"></div>
         </div>
         <div id="sobre" class="banner-sobre">
-            <div class="div_sobre-info">
-            <div class="div_sobre-titulo">Sobre a influência e mágica dos filmes</div>
-            <div class="div_sobre-texto">
-                    Os filmes do estúdio Ghibli com todos os seus cenários, sempre me cativaram pela quantidade de detalhes e pela profundidade da personalidade de cada personagem.
-                    Muitos dos filmes influenciaram o meu modo de ver o mundo e nos meus valores, o fato de representar mulheres e garotas como protagonistas, permitiu me identificar 
-                com as dificuldades enfrentadas e pelos valores apresentados pelas protagonistas como: determinação, coragem, lealdade, curiosidade e dedicação.
-                    Porém a mágica que os cenários ofereciam nunca deixaram a minha mente, essa sensação é impulsionada pelo MA ela é "a reminiscência de som que antecede o silêncio" 
-                ou seja o equilíbrio entre a ação e momentos que os personagens não estão fazendo nada elas tem como finalidade dar uma pausa para os personagens e os espectadores 
-                contemplarem o mundo que cerca o universo.Segundo o budismo reflexões do Ma sobre o tempo dão um sentido mais pleno para a vida e a existência sendo assim,
-                ao entender que tudo só pode ocorrer e ter movimento dentro do silêncio de um espaço vazio é o trabalho de uma vida, mas o seu exercício pode trazer conquistas jamais imaginadas.
+            <div id="sobre_info" class="div_sobre-info">
+            <div id="sobre_titulo" class="div_sobre-titulo"></div>
+            <div id="sobre_texto" class="div_sobre-texto">
+                    
 
             </div>
         </div>
         </div>
         <div id="estudio" class="banner-estudio">
-                <div class="historia-texto">
-                    <div class="estudio-logo">スタジオジブリ作品</div> <br>
-                O Studio Ghibli é um estúdio de animação japonês, sediado em Koganei, Tóquio. Fundado em 1985, o estúdio produziu cerca 21 longas de animação, sendo o primeiro O Castelo no Céu (1986) e o mais recente Aya e a bruxa (2020).
-                O Studio Ghibli foi fundado em 1985 por Hayao Miyazaki, Isao Takahata, Toshio Suzuki e Yasuyoshi Tokuma, logo após o sucesso de Nausicaä do Vale do Vento (1984), no ano anterior. O estúdio lançou seu primeiro filme, O Castelo no Céu, no ano seguinte. 
-                O logotipo da empresa é o Totoro, o personagem do filme Meu Amigo Totoro, lançado em 1988. 
-                Em 2001, o Museu Ghibli, um museu dedicado as obras do estúdio, foi inaugurado.
+            <div id="estudio_kanji" class="estudio-logo"></div> <br>
+                <div id="estudio_historia" class="historia-texto">
+                    
+                
                 </div>
         </div>
     </div>
 </body>
 </html>
+<script>
+    home_Kanji.innerHTML =  frases_home[0].texto;
+    home_Romaji.innerHTML = frases_home[1].texto;
+    home_subtitulo.innerHTML = frases_home[2].texto;
+    sobre_titulo.innerHTML = frases_sobre[0].texto;
+    sobre_texto.innerHTML = frases_sobre[1].texto;
+    estudio_kanji.innerHTML = frases_estudio[0].texto;
+    estudio_historia.innerHTML = frases_estudio[1].texto;
+</script>

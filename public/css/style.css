@@ -61,8 +61,8 @@ a{
     margin-top: 30vh;
     margin-left: 5vw;
     padding-bottom: 0%;
-    width: 50vw;
-    height: 30vh;
+    width: 50%;
+    height: 30%;
     color: white;
     font-size: 150px;
 }
@@ -111,8 +111,8 @@ a{
     color: white;
 }
 .div_sobre-texto{
-    height: 70vh;
-    width: 50vw;
+    height: 70%;
+    width: 90%;
     font-size: 20px;
     color: white;   
 
@@ -127,12 +127,14 @@ a{
     flex-direction: column;
 }
 .historia-texto{
-    margin-top: 20vh;
-    margin-left: 5vw;
-    height: 50vh;
-    width: 40vw;
+    margin-left: 5%;
+    height: 50%;
+    width: 40%;
     color: white;
 }
 .estudio-logo{
+    margin-top: 8%;
+    margin-left: 5%;
     font-size: 40px;
+    color: white;
 }
