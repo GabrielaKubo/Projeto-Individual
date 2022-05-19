@@ -4,7 +4,7 @@ body{
     
 }
 .Container{
-    height: 200vh;
+    height: 100vh;
     width: 100vw;
     background-color: aquamarine;
     display: flex;
@@ -16,8 +16,9 @@ body{
 }
 .Conteudo{
     height: 100%;
-    width: 85vw;
+    width: 100vw;
     background-color: blueviolet;
+    
 }
 .Conteudo .linha1{
     display: flex;
@@ -25,39 +26,9 @@ body{
     justify-content: center;
     align-items: center;
     justify-content: space-between;
-    height: 40vh;
+    height: 50vh;
     width: 100%;
     background-color: blue;
-}
-.card_nausicaa{
-    height: 80%;
-    width: 15%;
-    background-color: aqua;
-}
-.card_laputa{
-    height: 80%;
-    width: 15%;
-    background-color: green;
-}
-.card_totoro{
-    height: 80%;
-    width: 15%;
-    background-color: aqua;
-}
-.card_vagalumes{
-    height: 80%;
-    width: 15%;
-    background-color: green;
-}
-.card_kiki{
-    height: 80%;
-    width: 15%;
-    background-color: aqua;
-}
-.card_memorias{
-    height: 80%;
-    width: 15%;
-    background-color: green;
 }
 .linha2{
     display: flex;
@@ -65,39 +36,9 @@ body{
     justify-content: center;
     align-items: center;
     justify-content: space-between;
-    height: 40vh;
+    height: 50vh;
     width: 100%;
     background-color: green;
-}
-.card_porco{
-    height: 80%;
-    width: 15%;
-    background-color: yellow;
-}
-.card_oceano{
-    height: 80%;
-    width: 15%;
-    background-color: aqua;
-}
-.card_pompoko{
-    height: 80%;
-    width: 15%;
-    background-color: yellow;
-}
-.card_sussurros{
-    height: 80%;
-    width: 15%;
-    background-color: aqua;
-}
-.card_mononoke{
-    height: 80%;
-    width: 15%;
-    background-color: yellow;
-}
-.card_yamada{
-    height: 80%;
-    width: 15%;
-    background-color: aqua;
 }
 .linha3{
     display: flex;
@@ -105,39 +46,9 @@ body{
     justify-content: center;
     align-items: center;
     justify-content: space-between;
-    height: 40vh;
+    height: 50vh;
     width: 100%;
     background-color: yellow;
-}
-.card_chihiro{
-    height: 80%;
-    width: 15%;
-    background-color: violet;
-}
-.card_gatos{
-    height: 80%;
-    width: 15%;
-    background-color:  deepskyblue;
-}
-.card_castelo_animado{
-    height: 80%;
-    width: 15%;
-    background-color: violet;
-}
-.card_terramar{
-    height: 80%;
-    width: 15%;
-    background-color: deepskyblue;
-}
-.card_ponyo{
-    height: 80%;
-    width: 15%;
-    background-color: violet;
-}
-.card_arietty{
-    height: 80%;
-    width: 15%;
-    background-color: deepskyblue;
 }
 .linha4{
     display: flex;
@@ -145,32 +56,159 @@ body{
     justify-content: center;
     align-items: center;
     justify-content: space-between;
-    height: 40vh;
+    height: 50vh;
     width: 100%;
     background-color: pink;
 }
-.card_colina{
-    height: 80%;
+.linha5{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    height: 50vh;
+    width: 100%;
+    background-color: pink;
+}
+.card_nausicaa{
+    height: 90%;
     width: 15%;
-    background-color: red;
+    background-image: url(galeria-filmes/nausicaa.jpg);
+    background-size: cover;
+}
+.card_laputa{
+    height: 90%;
+    width: 15%;
+    background-image: url(galeria-filmes/laputa.jpg);
+    background-size: cover;
+}
+.card_totoro{
+    
+    background-image: url(galeria-filmes/totoro.jpg);
+    background-size: cover;
+    height: 90%;
+    width: 15%;
+}
+.card_vagalumes{
+    height: 90%;
+    width: 15%;
+    background-image: url(galeria-filmes/vagalumes.jpg);
+    background-size: cover;
+}
+.card_kiki{
+    height: 90%;
+    width: 15%;
+    background-image: url(galeria-filmes/kiki.jpg);
+    background-size: cover;
+}
+.card_memorias{
+    height: 90%;
+    width: 15%;
+    background-image: url(galeria-filmes/memorias-de-ontem.jpg);
+    background-size: cover;
+}
+
+.card_porco{
+    height: 90%;
+    width: 15%;
+    background-image: url(galeria-filmes/Porco_Rosso.jpg);
+    background-size: cover;
+}
+.card_oceano{
+    height: 90%;
+    width: 15%;
+    background-image: url(galeria-filmes/eu-posso-ouvir-o-oceano.jpg);
+    background-size: cover;
+}
+.card_pompoko{
+    height: 90%;
+    width: 15%;
+    background-image: url(galeria-filmes/pompoko.jpg);
+    background-size: cover;
+}
+.card_sussurros{
+    height: 90%;
+    width: 15%;
+    background-image: url(galeria-filmes/SUSSURROS-DO-CORAÇÃO.jpg);
+    background-size: cover;
+}
+.card_mononoke{
+    height: 90%;
+    width: 15%;
+    background-image: url(galeria-filmes/mononoke-hime.jpg);
+    background-size: cover;
+}
+.card_yamada{
+    height: 90%;
+    width: 15%;
+    background-image: url(galeria-filmes/meus-vizinhos-os-yamada.jpg);
+    background-size: cover;
+}
+
+.card_chihiro{
+    height: 90%;
+    width: 15%;
+    background-image: url(galeria-filmes/viagem-chihiro.jpg);
+    background-size: cover;
+}
+.card_gatos{
+    height: 90%;
+    width: 15%;
+    background-image: url(galeria-filmes/reino-dos-gatos.jpg);
+    background-size: cover;
+}
+.card_castelo_animado{
+    height: 90%;
+    width: 15%;
+    background-image: url(galeria-filmes/o-castelo-animado.jpg);
+    background-size: cover;
+}
+.card_terramar{
+    height: 90%;
+    width: 15%;
+    background-image: url(galeria-filmes/terramar.jpg);
+    background-size: cover;
+}
+.card_ponyo{
+    height: 90%;
+    width: 15%;
+    background-image: url(galeria-filmes/ponyo.jpg);
+    background-size: cover;
+}
+.card_arietty{
+    height: 90%;
+    width: 15%;
+    background-image: url(galeria-filmes/o-mundo-dos-pequeninos.jpg);
+    background-size: cover;
+}
+
+.card_colina{
+    height: 90%;
+    width: 15%;
+    background-image: url(galeria-filmes/colina.jpg);
+    background-size: cover;
 }
 .card_vidas_ao_vento{
-    height: 80%;
+    height: 90%;
     width: 15%;
-    background-color: violet;
+    background-image: url(galeria-filmes/vidas-ao-vento.jpg);
+    background-size: cover;
 }
 .card_kaguya{
-    height: 80%;
+    height: 90%;
     width: 15%;
-    background-color: red;
+    background-image: url(galeria-filmes/o-conto-da-princesa-kaguya.jpg);
+    background-size: cover;
 }
 .card_marnie{
-    height: 80%;
+    height: 90%;
     width: 15%;
-    background-color: violet;
+    background-image: url(galeria-filmes/as-memorias-de-marnie.jpg);
+    background-size: cover;
 }
 .card_aya{
-    height: 80%;
+    height: 90%;
     width: 15%;
-    background-color: red;
+    background-image: url(galeria-filmes/aya-e-a-bruxa.jpg);
+    background-size: cover;
 }
