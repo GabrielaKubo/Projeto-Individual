@@ -3,6 +3,7 @@ body{
     padding: 0;
     font-family: 'Quicksand', sans-serif;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 .header{
     position: fixed;
@@ -11,7 +12,7 @@ body{
     justify-content: left;
     align-items: center;
     background-color: rgba(0, 0, 0, 0);
-    height: 10vh;
+    height: 10%;
     width: 100vw;
 }
 .div_logo{
@@ -20,7 +21,7 @@ body{
     align-items: center;
     color: white;
     width: 20%;
-    line-height: 0.2;
+    line-height: 0.7;
 }
 .japones-logo{
     color: white;
@@ -28,6 +29,7 @@ body{
 .logo_romaji{
     font-size: 20px;
     color: white;
+    margin: 0;
 }
 .header ul{
     margin-left: 30vw;
@@ -54,7 +56,8 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
+    margin: 0;
 }
 .cadastro-card{
     height: 80%;
@@ -67,6 +70,8 @@ a{
     align-items: center;
     justify-content: space-between;
     background-color: #51a7b6;
+    padding-top: 10px;
+    margin-top: 2%;
 }
 .cadastro-container{
     height: 100%;

@@ -54,7 +54,18 @@ body{
      height: 90%;
      width: 100%;
  }
- canvas{
-     
+ .graficos{
+    height: 40%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
  }
+ .graph{
+     height: 30%;
+     width: 40%;
+ }
+ .graph2{
+   height: 30%;
+   width: 40%;
+}
  

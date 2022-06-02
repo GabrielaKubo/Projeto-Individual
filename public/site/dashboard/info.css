@@ -18,8 +18,9 @@ body{
     justify-content: left;
     align-items: center;
     background-color: rgba(0, 0, 0, 0);
-    height: 10vh;
+    height: 15%;
     width: 100vw;
+    padding: 20px;
  }
  .header_inicio .div_logo{
     display: flex;
@@ -29,7 +30,7 @@ body{
     
     color: white;
     width: 20vw;
-    line-height: 0.2;
+    line-height: 0;
  }
  .logo_romaji{
     font-size: 20px;
@@ -48,5 +49,36 @@ body{
  a{
     text-decoration: none;
     color: white;
+    font-size: 20px;
+ }
+ .banner_info{
+    height: 100vh;
+    width: 100vw;
+ }
+
+.info_container{
+   height:  85%;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+ .info{
+    background-color: red;
+    height: 60%;
+    width: 60%;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+   flex-direction: column;
+   padding: 10px;
+   border-radius: 14px;
+ }
+ .titulo{
+    padding: 0;
+    margin: 0;
+    margin-bottom: 5%;
+ }
+ .info{
     font-size: 20px;
  }
