@@ -50,3 +50,11 @@ body{
     color: white;
     font-size: 20px;
  }
+ .container{
+     height: 90%;
+     width: 100%;
+ }
+ canvas{
+     
+ }
+ 
