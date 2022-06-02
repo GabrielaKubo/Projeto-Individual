@@ -1,0 +1,52 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+.header_inicio{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+ }
+ .header{
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    justify-content: left;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    height: 10vh;
+    width: 100vw;
+ }
+ .header_inicio .div_logo{
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center;
+    
+    color: white;
+    width: 20vw;
+    line-height: 0.2;
+ }
+ .logo_romaji{
+    font-size: 20px;
+    
+ }
+ .header_inicio ul{
+    margin-left: 30vw;
+    display: flex;
+    justify-content: space-around;
+    width: 40vw;
+ 
+ }
+ li{
+    list-style: none;
+ }
+ a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+ }

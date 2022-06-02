@@ -6,7 +6,7 @@ nomeUser VARCHAR(50),
 email VARCHAR(20),
 senha VARCHAR(20),
 fkFavoritos INT,
-foreign key (fkFavoritos) references Favoritos (idFavorito)
+foreign key (fkFavoritos) references Favoritos (idFavorito)  
 );
 
 CREATE TABLE Favoritos(

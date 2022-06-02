@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="carrosel.js"></script>
+    <link rel="stylesheet" href="Filmografia.css">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="banner_filmografia">
+        <div class="header_filmografia">
+            <div class="div_logo">
+                <h1 class="japones-logo">ジブリと間 </h1>
+                <h1 class="logo_romaji">Ghibli & MA</h1>
+            </div>
+            <ul>
+                <li class="#"><a href="info.html">Home</a> </li>
+                <li class="now" ><a href="Filmografia.html">Filmografia</a> </li>
+                <li class="#"><a href="Votacao.html">Votação</a> </li>
+                <li><a>|</a> </li>
+                <li class="#" id="Sair"><a href="">Sair</a> </li>
+            </ul>
+        </div>
+        <h1>Filmografia</h1>
+        <div class="container">
+        <select id="filmes" onchange="escolha()"> 
+            <option value="nothing">Selecione um intervalo de filmes por ano</option>
+            <option value="filme1">1984-1988</option>
+            <option value="filme2">1989-1992</option>
+            <option value="filme3">1994-1999</option>
+            <option value="filme4">2001-2006</option>
+            <option value="filme5">2008-2013</option>
+            <option value="filme6">2014-2020</option>
+        </select>
+        <div class="lista">
+            <div id="poster1" class="card1"></div>
+            <div id="poster2" class="card2"></div>
+            <div id="poster3" class="card3"></div>
+            <div id="poster4" class="card4"></div>
+        </div>  
+    </div>
+    </div>
+</body>
+</html>
+<script>
+    function escolha(){
+        if(filmes.value == 'filme1'){
+            poster1.innerHTML =  `${filme[0].imagem} <br> 1984`;
+            poster2.innerHTML = `${filme[1].imagem}<br> 1986`;
+            poster3.innerHTML = `${filme[2].imagem}<br> 1988`;
+            poster4.innerHTML = `${filme[3].imagem}<br> 1988`;
+        }else if(filmes.value == 'filme2'){
+            poster1.innerHTML = `${filme[4].imagem}<br> 1989`;
+            poster2.innerHTML = `${filme[5].imagem}<br> 1991`;
+            poster3.innerHTML = `${filme[6].imagem}<br> 1992`;
+            poster4.innerHTML = `${filme[7].imagem}<br> 1993`;
+        }else if(filmes.value == 'filme3'){
+            poster1.innerHTML = `${filme[8].imagem}<br> 1994`;
+            poster2.innerHTML = `${filme[9].imagem}<br> 1995`;
+            poster3.innerHTML = `${filme[10].imagem}<br> 1997`;
+            poster4.innerHTML = `${filme[11].imagem}<br> 1999`;
+        }else if(filmes.value == 'filme4'){
+            poster1.innerHTML = `${filme[12].imagem}<br> 2001`;
+            poster2.innerHTML = `${filme[13].imagem}<br> 2002`;
+            poster3.innerHTML = `${filme[14].imagem}<br> 2004`;
+            poster4.innerHTML = `${filme[15].imagem}<br> 2006`;
+        }else if(filmes.value == 'filme5'){
+            poster1.innerHTML = `${filme[16].imagem}<br> 2008`;
+            poster2.innerHTML = `${filme[17].imagem}<br> 2010`;
+            poster3.innerHTML = `${filme[18].imagem}<br> 2011`;
+            poster4.innerHTML = `${filme[19].imagem}<br> 2013`;
+        }else if(filmes.value == 'filme6'){
+            poster1.innerHTML = `${filme[20].imagem}<br> 2013`;
+            poster2.innerHTML = `${filme[21].imagem}<br> 2014`;
+            poster3.innerHTML = `${filme[22].imagem}<br> 2020`;
+            poster4.innerHTML = "";
+        }else{
+            alert('Por favor selecione um intervalo')
+        }
+    }
+
+</script>
