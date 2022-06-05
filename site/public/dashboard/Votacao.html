@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Quicksand:wght@500&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="../js/funcoes.js"></script>
+    <script src="votacao.js"></script>
 </head>
 <body onload="validarSessao(), atualizarFeed()">
     <div class="header_votacao">
@@ -28,7 +29,7 @@
         </ul>
     </div>
     <div class="container">
-        <select id="TodosFilmes">
+        <select id="TodosFilmes" onclick="escolhaFilme()">
             <option value="1">Nausicaa do Vale do Vento</option>
             <option value="2">O Castelo no Céu</option>
             <option value="3">Meu Amigo Totoro</option>
@@ -42,10 +43,103 @@
             <option value="11">Vidas ao Vento</option>
         </select>
         <div id="Personagens" class="Characters">
-            <div id="Perso1"></div>
-            <div id="Perso2"></div>
-            <div id="Perso3"></div>
-            <div id="Perso4"></div>
+            <div id="Perso1">
+              <select id="Sel1" style="display:none;">
+                <option>Selecione um Personagem</option>
+                <option value="1">Kushana</option>
+                <option value="2">Nausicaa</option>
+                <option value="3">Asbel</option>
+                <option value="4">Yupa</option>
+              </select>
+            </div>
+            <div id="Perso2">
+              <select id="Sel2" style="display:none;">
+                <option>Selecione um Personagem</option>
+                <option value="5">Sheeta</option>
+                <option value="6">Dola</option>
+                <option value="7">Pazu</option>
+                <option value="8">Muska</option>
+              </select>
+            </div>
+            <div id="Perso3">
+              <select id="Sel3" style="display:none;">
+                <option>Selecione um Personagem</option>
+                <option value="9">Totoro</option>
+                <option value="10">Mei Kusakabe</option>
+                <option value="11">Satsuki Kusakabe</option>
+                <option value="12">Catbus</option>
+              </select>
+            </div>
+            <div id="Perso4">
+              <select id="Sel4" style="display:none;">
+                <option>Selecione um Personagem</option>
+                <option value="13">Seita</option>
+                <option value="14">Setsuko</option>
+              </select>
+            </div>
+            <div id="Perso5">
+              <select id="Sel5" style="display:none;">
+                <option>Selecione um Personagem</option>
+                <option value="15">Jiji</option>
+                <option value="16">Tombo</option>
+                <option value="17">Ursula</option>
+                <option value="18">Kiki</option>
+              </select>
+            </div>
+            <div id="Perso6">
+              <select id="Sel6" style="display:none;">
+                <option>Selecione um Personagem</option>
+                <option value="19">Gina</option>
+                <option value="20">Porco Rosso</option>
+                <option value="21">Fio Piccolo</option>
+              </select>
+            </div>
+            <div id="Perso7">
+              <select id="Sel7" style="display:none;">
+                <option>Selecione um Personagem</option>
+                <option value="22">Ashitaka</option>
+                <option value="23">San</option>
+                <option value="24">Moro</option>
+                <option value="25">Lady Eboshi</option>
+              </select>
+            </div>
+            <div id="Perso8">
+              <select id="Sel8" style="display:none;">
+                <option>Selecione um Personagem</option>
+                <option value="26">Chihiro Ogino</option>
+                <option value="27">Haku</option>
+                <option value="28">Lin</option>
+                <option value="29">Sem Rosto</option>
+              </select>
+            </div>
+            <div id="Perso9">
+              <select id="Sel9" style="display:none;">
+                <option>Selecione um Personagem</option>
+                <option value="30">Sophie Hatter</option>
+                <option value="31">Howl</option>
+                <option value="32">Calcifer</option>
+                <option value="33">Cabeça de Nabo</option>
+                <option value="34">Markl</option>
+              </select>             
+            </div>
+            <div id="Perso10">
+              <select id="Sel10" style="display: none;">
+                <option>Selecione um Personagem</option>
+                <option value="35">Sosuke</option>
+                <option value="36">Ponyo</option>
+                <option value="37">Lisa</option>
+                <option value="38">Fujimoto</option>
+                <option value="39">Granmamare</option>
+              </select>
+            </div>
+            <div id="Perso11">
+              <select id="Sel11" style="display: none;">
+                <option>Selecione um Personagem</option>
+                <option value="40">Nahoko Satomi</option>
+                <option value="41">Jiro Horikoshi</option>
+                <option value="42">Honjo</option>
+              </select>
+            </div>
         </div>
         <button onclick="confirmar()">Confirmar Voto</button>
         <div class="graficos">
@@ -59,87 +153,6 @@
     </div>
 </body>
 </html>
-<!-- <script>
-    const labels = [
-    'TOP-1',
-    'TOP-2',
-    'TOP-3',
-  ];
-const data = {
-  labels: labels,
-  datasets: [{
-    label: 'Top 3-Filmes',
-    data: [65, 59, 80, 81, 56, 55, 40],
-    backgroundColor: [
-      'rgba(255, 99, 132, 0.2)',
-      'rgba(255, 159, 64, 0.2)',
-      'rgba(255, 205, 86, 0.2)'
-    ],
-    borderColor: [
-      'rgb(255, 99, 132)',
-      'rgb(255, 159, 64)',
-      'rgb(255, 205, 86)'
-    ],
-    borderWidth: 1
-  }]
-};
-const labels2 = [
-    'TOP-1',
-    'TOP-2',
-    'TOP-3',
-  ];
-const data2 = {
-  labels: labels,
-  datasets: [{
-    label: 'Top 3-Personagens',
-    data: [65, 59, 80, 81, 56, 55, 40],
-    backgroundColor: [
-      'rgba(255, 99, 132, 0.2)',
-      'rgba(255, 159, 64, 0.2)',
-      'rgba(255, 205, 86, 0.2)'
-    ],
-    borderColor: [
-      'rgb(255, 99, 132)',
-      'rgb(255, 159, 64)',
-      'rgb(255, 205, 86)'
-    ],
-    borderWidth: 1
-  }]
-};
-const config = {
-  type: 'bar',
-  data: data,
-  options: {
-    scales: {
-      y: {
-        beginAtZero: true
-      }
-    }
-  },
-};
-const config2 = {
-  type: 'bar',
-  data: data,
-  options: {
-    scales: {
-      y: {
-        beginAtZero: true
-      }
-    }
-  },
-};
-
-</script>
-<script>
-    const myChart = new Chart(
-      document.getElementById('myChart'),
-      config
-    );
-    const myChart2 = new Chart(
-      document.getElementById('myChart2'),
-      config
-    );
-  </script> -->
   <script>
      let proximaAtualizacao;
 
@@ -149,9 +162,9 @@ b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
 verificar_autenticacao();
 
-function alterarTitulo(idAquario) {
+function alterarTitulo(idUsuario) {
     var tituloAquario = document.getElementById("tituloAquario")
-    tituloAquario.innerHTML = "Últimas medidas de Temperatura e Umidade do <span style='color: #e6005a'>Aquário " + idAquario + "</span>"
+    tituloAquario.innerHTML = "Últimas medidas de Temperatura e Umidade do <span style='color: #e6005a'>Aquário " + idUsuario + "</span>"
 }
 
 // O gráfico é construído com três funções:
@@ -165,20 +178,20 @@ function alterarTitulo(idAquario) {
 
 //     Se quiser alterar a busca, ajuste as regras de negócio em src/controllers
 //     Para ajustar o "select", ajuste o comando sql em src/models
-function obterDadosGrafico(idAquario) {
-    alterarTitulo(idAquario)
+function obterDadosGrafico(idUsuario) {
+    alterarTitulo(idUsuario)
 
     if (proximaAtualizacao != undefined) {
         clearTimeout(proximaAtualizacao);
     }
 
-    fetch(`/medidas/ultimas/${idAquario}`, { cache: 'no-store' }).then(function (response) {
+    fetch(`/medidas/ultimas/${idUsuario}`, { cache: 'no-store' }).then(function (response) {
         if (response.ok) {
             response.json().then(function (resposta) {
                 console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
                 resposta.reverse();
 
-                plotarGrafico(resposta, idAquario);
+                plotarGrafico(resposta, idUsuario);
             });
         } else {
             console.error('Nenhum dado encontrado ou erro na API');
@@ -192,7 +205,7 @@ function obterDadosGrafico(idAquario) {
 // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
 // Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
 // A função *plotarGrafico* também invoca a função *atualizarGrafico*
-function plotarGrafico(resposta, idAquario) {
+function plotarGrafico(resposta, idUsuario) {
     console.log('iniciando plotagem do gráfico...');
 
     var dados = {
@@ -245,7 +258,7 @@ function plotarGrafico(resposta, idAquario) {
         }
     });
 
-    setTimeout(() => atualizarGrafico(idAquario, dados), 2000);
+    setTimeout(() => atualizarGrafico(idUsuario, dados), 2000);
 }
 
 
@@ -254,9 +267,9 @@ function plotarGrafico(resposta, idAquario) {
 
 //     Se quiser alterar a busca, ajuste as regras de negócio em src/controllers
 //     Para ajustar o "select", ajuste o comando sql em src/models
-function atualizarGrafico(idAquario, dados) {
+function atualizarGrafico(idUsuario, dados) {
 
-    fetch(`/medidas/tempo-real/${idAquario}`, { cache: 'no-store' }).then(function (response) {
+    fetch(`/medidas/tempo-real/${idUsuario}`, { cache: 'no-store' }).then(function (response) {
         if (response.ok) {
             response.json().then(function (novoRegistro) {
 
@@ -276,12 +289,12 @@ function atualizarGrafico(idAquario, dados) {
                 window.grafico_linha.update();
 
                 // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
-                proximaAtualizacao = setTimeout(() => atualizarGrafico(idAquario, dados), 2000);
+                proximaAtualizacao = setTimeout(() => atualizarGrafico(idUsuario, dados), 2000);
             });
         } else {
             console.error('Nenhum dado encontrado ou erro na API');
             // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
-            proximaAtualizacao = setTimeout(() => atualizarGrafico(idAquario, dados), 2000);
+            proximaAtualizacao = setTimeout(() => atualizarGrafico(idUsuario, dados), 2000);
         }
     })
         .catch(function (error) {
