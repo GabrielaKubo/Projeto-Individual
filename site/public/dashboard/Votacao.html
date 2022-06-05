@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Quicksand:wght@500&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/funcoes.js"></script>
 </head>
 <body onload="validarSessao(), atualizarFeed()">
     <div class="header_votacao">
@@ -20,9 +21,9 @@
             <li class="#"><a href="info.html">Home</a> </li>
             <li class="#" ><a href="Filmografia.html">Filmografia</a> </li>
             <li class="now"><a href="Votacao.html">Votação</a> </li>
+            <li class="#"><a href="MiniGame"></a></li>
             <li><a>|</a> </li>
-            <div class="btn-logout" onclick="limparSessao()">
-              <li class="#" id="Sair"><a href="">Sair</a> </li>
+            <li class="#" id="Sair" onclick="limparSessao()"><a href="">Sair</a> </li>
             </div>
         </ul>
     </div>
@@ -33,24 +34,12 @@
             <option value="3">Meu Amigo Totoro</option>
             <option value="4">Túmulo dos Vagalumes</option>
             <option value="5">O serviço de Entregas da Kiki</option>
-            <option value="6">Memórias de Ontem</option>
-            <option value="7">Porco Rosso: O Último Heróis Romântico</option>
-            <option value="8">Eu posso Ouvir o Oceano</option>
-            <option value="9">PomPoko: A Grande Batalha dos Guaxinins</option>
-            <option value="10">Sussurros do Coração</option>
-            <option value="11">Princesa Mononoke</option>
-            <option value="12">Meus Vizinhos os Yamadas</option>
-            <option value="13">A Viagem de Chihiro</option>
-            <option value="14">O Reino dos Gatos</option>
-            <option value="15">O Castelo Animado</option>
-            <option value="16">Contos de Terramar</option>
-            <option value="17">Ponyo: Uma Amizade que Veio do Mar</option>
-            <option value="18">O Mundo dos Pequeninos</option>
-            <option value="19">Da Colina Kokuriko</option>
-            <option value="20">Vidas ao Vento</option>
-            <option value="21">O Conto da Princesa Kaguya</option>
-            <option value="22">As Memórias de Marnie</option>
-            <option value="23">Aya e a Bruxa</option>
+            <option value="6">Porco Rosso: O Último Heróis Romântico</option>
+            <option value="7">Princesa Mononoke</option>
+            <option value="8">A Viagem de Chihiro</option>
+            <option value="9">O Castelo Animado</option>
+            <option value="10">Ponyo: Uma Amizade que Veio do Mar</option>
+            <option value="11">Vidas ao Vento</option>
         </select>
         <div id="Personagens" class="Characters">
             <div id="Perso1"></div>

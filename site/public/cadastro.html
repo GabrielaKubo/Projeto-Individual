@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <script src="js/cadastro.js"></script>
 </head>
 <body>
     <div class="header">
@@ -45,6 +46,13 @@
             </div>
         </div>
         <div id="erro" class="erro_card" style="display: none;"></div>
+       
+    </div>
+    <div id="footer" class="footer_page">
+        <div id="instagram_logo" class="insta_logo" onclick="change_window()">
+            <img src="css/galeria/logotipo-do-instagram.png" alt="">
+        </div>
+        <div>Feito com carinho por um aluno da SPTech.</div>
     </div>
 </body>
 </html>
@@ -77,7 +85,6 @@
                 senhaServer: senhaVar
             })
         }).then(function (resposta) {
-            console.log('ESTOU NO THEN DO ENTRAR()');
 
             console.log("resposta: ", resposta);
 

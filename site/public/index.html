@@ -20,9 +20,10 @@
                     <h1 class="logo_romaji">Ghibli & MA</h1>
                 </div>
                 <ul>
-                    <li class="under"><a href="#home">Home</a> </li>
+                    <li class="under" ><a href="#home">Home</a> </li>
                     <li class="grow" ><a href="#sobre">Sobre</a> </li>
                     <li class="grow"><a href="#estudio">Estúdio</a> </li>
+                    <li><a href="#hayao_miyazaki">Miyazaki</a></li>
                     <li><a>|</a> </li>
                     <li class="grow" id="cadastro"><a href="cadastro.html">Cadastro</a> </li>
                     <li class="grow" id="login"><a href="login.html">Login</a> </li>
@@ -35,7 +36,7 @@
         </div>
         <div id="sobre" class="banner-sobre">
             <div id="sobre_info" class="div_sobre-info">
-            <div id="sobre_titulo" class="div_sobre-titulo"></div>
+            <div id="sobre_titulo" class="div_sobre-titulo"></div> <br><br>
             <div id="sobre_texto" class="div_sobre-texto">
                     
 
@@ -44,12 +45,33 @@
         </div>
         <div id="estudio" class="banner-estudio">
             <div id="estudio_kanji" class="estudio-logo"></div> <br>
-                <div id="estudio_historia" class="historia-texto">
-                    
-                
+                <div id="estudio_historia" class="historia-texto"></div>
+        </div>
+        <div id="hayao_miyazaki" class="Hayao" >
+            <div id="foto" class="hayao_foto"> 
+                <img src="css/galeria/miyazaki.jpg" alt="" class="foto_miyazaki">
+            </div>
+            <div id="hayao_info" class="info_hayao">
+                <div id="titulo_hayao" class="titulo_miyazaki"></div> <br>
+                <div id="miyazaki_frase" class="miyazaki_frase"></div> <br><br>
+                <div class="info_conteudo">
+                    <div id="nascimento" class="Nascimento"></div>
+                    <div id="local" class="Local"></div>
+                    <div id="ocupacao" class="ocup"></div>
+                    <div id="influencia" class="influencias"></div>
+                    <div id="carreira" class="Miyazaki_carreira"></div><br>
+                    <div class="fatos" id="hayao_fatos"></div>
                 </div>
+            </div>
+        </div>
+        <div id="footer" class="footer_page">
+            <div id="instagram_logo" class="insta_logo" onclick="change_window()">
+                <img src="css/galeria/logotipo-do-instagram.png" alt="">
+            </div>
+            <div>Feito com carinho por um aluno da SPTech.</div>
         </div>
     </div>
+
 </body>
 </html>
 <script>
@@ -60,4 +82,15 @@
     sobre_texto.innerHTML = frases_sobre[1].texto;
     estudio_kanji.innerHTML = frases_estudio[0].texto;
     estudio_historia.innerHTML = frases_estudio[1].texto;
+    titulo_hayao.innerHTML = miyazaki[0].texto;
+    miyazaki_frase.innerHTML = miyazaki[1].texto;
+    nascimento.innerHTML = miyazaki[2].texto;
+    local.innerHTML = miyazaki[3].texto;
+    ocupacao.innerHTML = miyazaki[4].texto;
+    influencia.innerHTML = miyazaki[5].texto;
+    carreira.innerHTML = miyazaki[6].texto;
+    hayao_fatos.innerHTML = miyazaki[7].texto;
+function change_window(){
+    window.location.assign("https://www.instagram.com/invites/contact/?i=h7jnwu2i36xw&utm_content=3uxz4j");
+}
 </script>

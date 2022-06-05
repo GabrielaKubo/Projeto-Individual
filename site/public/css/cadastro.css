@@ -3,8 +3,43 @@ body{
     padding: 0;
     font-family: 'Quicksand', sans-serif;
     overflow-x: hidden;
-    overflow-y: hidden;
 }
+input{
+    outline: 0;
+    border: none;
+    height: 30px;
+    width: 70%;
+    border-radius: 14px;
+}
+input:focus {
+    border: 3px solid #555;
+    border-radius: 14px;
+  }
+  a {
+    position: relative;
+    color: #fff;
+    text-decoration: none;  
+  }
+a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+  }
+  
+  a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
 .header{
     position: fixed;
     display: flex;
@@ -12,24 +47,25 @@ body{
     justify-content: left;
     align-items: center;
     background-color: rgba(0, 0, 0, 0);
-    height: 10%;
+    height: 10vh;
     width: 100vw;
 }
 .div_logo{
+    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     color: white;
     width: 20%;
-    line-height: 0.7;
+    line-height: 0.2;
 }
 .japones-logo{
     color: white;
 }
 .logo_romaji{
+    margin: 10px;
     font-size: 20px;
     color: white;
-    margin: 0;
 }
 .header ul{
     margin-left: 30vw;
@@ -56,10 +92,10 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
-    margin: 0;
+    flex-direction: column;
 }
 .cadastro-card{
+    margin-top: 3%;
     height: 80%;
     width: 30%;
     border: 2px solid #51a7b6;
@@ -70,8 +106,6 @@ a{
     align-items: center;
     justify-content: space-between;
     background-color: #51a7b6;
-    padding-top: 10px;
-    margin-top: 2%;
 }
 .cadastro-container{
     height: 100%;
@@ -110,7 +144,7 @@ p{
 .btn_cadastro{
    border-radius: 40px;
    border: 1px solid #abbe6c;
-    height: 50%;
+    height: 30%;
     width: 40%;
     font-size: 20px;
     transition-duration: 0.4s;
@@ -119,10 +153,6 @@ p{
 .btn_cadastro:hover{
     background-color: #abbe6c;
     color: white;
-}
-input{
-    display: flex;
-    font-size: 15px;
 }
 .erro_card{
    padding: 20px;
@@ -137,3 +167,19 @@ input{
     font-size: 20px;
     margin: 10px;
   }
+  /* FOOTER */
+.footer_page{
+    height: 15vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    background-color:#B9C297;
+}
+img{
+   
+    height: 40px;
+    cursor: pointer;
+}
