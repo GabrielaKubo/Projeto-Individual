@@ -10,6 +10,7 @@ input{
     height: 20px;
     width: 70%;
     border-radius: 14px;
+    padding: 10px;
 }
 input:focus {
     border: 3px solid #555;
@@ -95,7 +96,7 @@ a{
     flex-direction: column;
 }
 .card-login{
-    height: 50vh;
+    height: 60vh;
     width: 20vw;
     border-radius: 40px;
     background-color: rgba(0, 0, 0, 0.753);

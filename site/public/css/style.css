@@ -202,11 +202,12 @@ a{
     font-weight: 600;
 }
 .miyazaki_frase{
-    font-size: 25px;
+    font-size: 20px;
 }
 .info_conteudo{
-    height: 60%;
-    font-size: 20px;
+    margin-top: 10%;
+    height: 40%;
+    font-size: 17px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
