@@ -1,18 +1,19 @@
 // sessão
 function validarSessao() {
     // aguardar();
-
+    
     var email = sessionStorage.EMAIL_USUARIO;
     var nome = sessionStorage.NOME_USUARIO;
-
+    var filme = sessionStorage.FILME_USUARIO;
     var emailUsuario = document.getElementById("emailUsuario");
+    var nomeFilme = document.getElementById("nomeFilme");
     if (email != null && nome != null) {
         // window.alert(`Seja bem-vindo, ${nome}!`);
         if (emailUsuario != undefined) {
             emailUsuario.innerHTML = email;
         }
         nomeUsuario.innerHTML = nome;
-
+        nomeFilme.innerHTML = filme;
         // finalizarAguardar();
     } else {
         window.location = "../login.html";

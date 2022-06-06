@@ -40,20 +40,6 @@
                 <input type="password" id="ipt_senha" class="senha" placeholder="Insira sua senha">
                 <p>Confirmar senha:</p>
                 <input type="password" id="ipt_senha_confirmacao" class="confirmar_senha" placeholder="Confirme sua senha"> <br> <br>
-                <select id="TodosFilmes">
-                    <option value="0">Selecione um filme</option>
-                    <option value="1">Nausicaa do Vale do Vento</option>
-                    <option value="2">O Castelo no Céu</option>
-                    <option value="3">Meu Amigo Totoro</option>
-                    <option value="4">Túmulo dos Vagalumes</option>
-                    <option value="5">O serviço de Entregas da Kiki</option>
-                    <option value="6">Porco Rosso: O Último Heróis Romântico</option>
-                    <option value="7">Princesa Mononoke</option>
-                    <option value="8">A Viagem de Chihiro</option>
-                    <option value="9">O Castelo Animado</option>
-                    <option value="10">Ponyo: Uma Amizade que Veio do Mar</option>
-                    <option value="11">Vidas ao Vento</option>
-                </select>
                 <div class="cadastro-end">
                     <button onclick="cadastrar()" class="btn_cadastro">Cadastrar</button>
                     <img src="css/galeria/pngegg.png" class="foto-cadastro">
@@ -73,7 +59,6 @@
 </html>
 <script>
     function cadastrar(){
-        var filmeVar = TodosFilmes.value;
         var nomeVar = ipt_nome.value;
         var emailVar = ipt_email.value;
         var senhaVar = ipt_senha.value;
@@ -98,7 +83,6 @@
             body: JSON.stringify({
                 // crie um atributo que recebe o valor recuperado aqui
                 // Agora vá para o arquivo routes/usuario.js
-                filmeServer: filmeVar,
                 nomeServer: nomeVar,
                 emailServer: emailVar,
                 senhaServer: senhaVar
@@ -125,4 +109,6 @@
     function sumirMensagem() {
         erro.style.display = "none"
     }
-    </script>
+
+    
+</script>
