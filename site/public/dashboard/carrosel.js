@@ -9,3 +9,7 @@ var filme_textos = [{"texto":"Nausicaä do Vale do Vento"},{"texto":"O Castelo n
 {"texto":"O Serviço de Entregas da Kiki"},{"texto":"Porco Rosso: O Último Herói Romântico"},
 {"texto":"Princesa Mononoke"},{"texto":" A Viagem de Chihiro"},{"texto":"O Castelo Animado"},
 {"texto":"Ponyo: Uma Amizade Que Veio do Mar"},{"texto":"Vidas ao Vento"}]
+var game = [{"imagem":` <img src="galeria-filmes/makurokurosuke.gif" alt="">`}
+,{"imagem":`<img src="galeria-filmes/mononoke.gif" alt="">`}
+,{"imagem":` <img src="galeria-filmes/ponyo.gif" alt="">`},
+{"imagem":` <img src="galeria-filmes/totoro.gif" alt="">`}];
