@@ -47,12 +47,13 @@
         var imagem = game_img.value;
         var escolha = sel_game.value;
         for(var index = 0; index <= 4; index++){
-            if(index == 0 && escolha == 1){
+            if(escolha == 1){
                 alert('Parabéns');
                 chihiro_img.style.display = "none";
                 totoro_img.style.display = "block";
                 mononoke_img.style.display = "none";
                 ponyo_img.style.display = "none";
+                break
             }
             else if(index == 1 && escolha == 4){
                 alert('Parabéns');
@@ -60,6 +61,7 @@
                 totoro_img.style.display = "none";
                 mononoke_img.style.display = "block";
                 ponyo_img.style.display = "none";
+                break
             }
             else if(index == 2 && escolha == 2){
                 alert('Parabéns');
@@ -67,6 +69,7 @@
                 totoro_img.style.display = "none";
                 mononoke_img.style.display = "none";
                 ponyo_img.style.display = "block";
+                break
             }
             else if(index == 3 && escolha == 3){
                 alert('Parabéns');
@@ -74,7 +77,11 @@
                 totoro_img.style.display = "none";
                 mononoke_img.style.display = "none";
                 ponyo_img.style.display = "none";
-            }     
+                break
+            } else{
+                alert('tente novamente');
+                return false;
+            }
         }
         
     }

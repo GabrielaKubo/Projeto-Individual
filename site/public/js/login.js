@@ -22,6 +22,8 @@ function entrar() {
                 sessionStorage.LOGIN_USUARIO = json.login;
                 sessionStorage.NOME_USUARIO = json.nomeUser;
                 sessionStorage.ID_USUARIO = json.idUsuario;
+                sessionStorage.PERSONAGEM_USUARIO = json.nomePersonagem;
+                
                 setTimeout(function () {
                     window.location = "/index.html";
                 }, 1000);
@@ -51,13 +53,15 @@ function validarSessao() {
     var login = sessionStorage.LOGIN_USUARIO;
     var nome = sessionStorage.NOME_USUARIO;
     var nomeFilme = sessionStorage.FILME_USUARIO;
+    var nomePersonagem = sessionStorage.PERSONAGEM_USUARIO;
     var h1Titulo = document.getElementById("h1_titulo");
     
     if (login != null && nome != null) {
         // window.alert(`Seja bem-vindo, ${nome}!`);
         h1Titulo.innerHTML = `${login}`;
         nome.innerHTML = `${nome}`;
-        nomeFilme.sessionStorage.FILME_USUARIO
+        nomeFilme.sessionStorage.FILME_USUARIO;
+        nomePersonagem.sessionStorage.PERSONAGEM_USUARIO;
         finalizarAguardar();
     } else {
         window.location = "login.html";

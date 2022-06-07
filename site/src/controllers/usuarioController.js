@@ -66,6 +66,7 @@ function cadastrar(req, res) {
     var email = req.body.emailServer;
     var senha = req.body.senhaServer;
     var filme = req.body.filmeServer;
+    var personagem = req.body.persoServer;
 
     // Faça as validações dos valores
     if (nome == undefined) {
@@ -77,7 +78,7 @@ function cadastrar(req, res) {
     } else {
         
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        usuarioModel.cadastrar(nome, email, senha, filme)
+        usuarioModel.cadastrar(nome, email, senha, filme, personagem)
             .then(
                 function (resultado) {
                     res.json(resultado);
@@ -94,40 +95,10 @@ function cadastrar(req, res) {
             );
     }
 }
-// function confirmar(req, res) {
-//     // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
-//     // var Select1Var = req.body.SelectServer;
-//     var boxALL = req.body.filmeServer;
-//     var id = req.body.IdServer;
-//     console.log(id);
-//     // Faça as validações dos valores
-//     if (boxALL == undefined) {
-//         res.status(400).send("Sua boxALL está undefined!");
-//     }
-  
-//         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-//         usuarioModel.confirmar(boxALL, id)
-//             .then(
-//                 function (resultado) {
-//                     res.json(resultado);
-//                 }
-//             ).catch(
-//                 function (erro) {
-//                     console.log(erro);
-//                     console.log(
-//                         "\nHouve um erro ao realizar o cadastro! Erro: ",
-//                         erro.sqlMessage
-//                     );
-//                     res.status(500).json(erro.sqlMessage);
-//                 }
-//             );
-    
-// }
 
 module.exports = {
     entrar,
     cadastrar,
-    // confirmar,
     listar,
     testar
 }

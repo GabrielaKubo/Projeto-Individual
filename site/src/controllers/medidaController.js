@@ -20,11 +20,11 @@ function buscarUltimasMedidas(req, res) {
 
 function buscarMedidasEmTempoReal(req, res) {
 
-    var idFavorito = req.params.idFavorito;
+    var idUsuario = req.params.idUsuario;
 
     console.log(`Recuperando medidas em tempo real`);
 
-    medidaModel.buscarMedidasEmTempoReal(idFavorito).then(function (resultado) {
+    medidaModel.buscarMedidasEmTempoReal(idUsuario).then(function (resultado) {
         if (resultado.length > 0) {
             res.status(200).json(resultado);
         } else {

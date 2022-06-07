@@ -5,6 +5,7 @@ function validarSessao() {
     var email = sessionStorage.EMAIL_USUARIO;
     var nome = sessionStorage.NOME_USUARIO;
     var filme = sessionStorage.FILME_USUARIO;
+    var personagem = sessionStorage.PERSONAGEM_USUARIO;
     var emailUsuario = document.getElementById("emailUsuario");
     var nomeFilme = document.getElementById("nomeFilme");
     if (email != null && nome != null) {
@@ -14,6 +15,7 @@ function validarSessao() {
         }
         nomeUsuario.innerHTML = nome;
         nomeFilme.innerHTML = filme;
+        nomePersonagem.innerHTML = personagem;
         // finalizarAguardar();
     } else {
         window.location = "../login.html";
