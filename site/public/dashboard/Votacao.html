@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,12 +8,14 @@
     <title>Document</title>
     <link rel="stylesheet" href="votacao.css">
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Quicksand:wght@500&display=swap"
+        rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="../dashboard/votacao.js"></script>
     <script src="votacao.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 </head>
+
 <body>
     <div class="header_votacao">
         <div class="div_logo">
@@ -21,13 +24,13 @@
         </div>
         <ul>
             <li class="#"><a href="info.html">Info</a> </li>
-            <li class="#" ><a href="Filmografia.html">Filmografia</a> </li>
+            <li class="#"><a href="Filmografia.html">Filmografia</a> </li>
             <li class="now"><a href="Votacao.html">Votação</a> </li>
             <li class="#"><a href="minigame.html">Minigame</a></li>
             <li><a>|</a> </li>
             <li class="#" id="Sair" onclick="limparSessao()"><a href="">Sair</a> </li>
-            </div>
-        </ul>
+    </div>
+    </ul>
     </div>
     <div class="container">
         <select id="TodosFilmes">
@@ -94,141 +97,134 @@
         </div> -->
         <button onclick="confirmar()">Confirmar Voto</button>
         <div class="graficos">
-        <div class="graph">
-            <canvas id="canvas_grafico"></canvas>
-          </div>
-          <div class="graph2">
-            <canvas id="myChart2"></canvas>
-          </div>
+            <div class="graph">
+                <canvas id="canvas_grafico"></canvas>
+            </div>
         </div>
     </div>
 </body>
+
 </html>
-  <script>
-     let proximaAtualizacao;
+<script>
+    let proximaAtualizacao;
 
-window.onload = obterDadosGrafico(1);
+    window.onload = obterDadosGrafico(1);
 
-// b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+    // b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
-// verificar_autenticacao();
+    // verificar_autenticacao();
 
-// function alterarTitulo(idUsuario) {
-//     var tituloAquario = document.getElementById("tituloAquario")
-//     tituloAquario.innerHTML = "Últimas medidas de Temperatura e Umidade do <span style='color: #e6005a'>Aquário " + idUsuario + "</span>"
-// }
-
-// O gráfico é construído com três funções:
-// 1. obterDadosGrafico -> Traz dados do Banco de Dados para montar o gráfico da primeira vez
-// 2. plotarGrafico -> Monta o gráfico com os dados trazidos e exibe em tela
-// 3. atualizarGrafico -> Atualiza o gráfico, trazendo novamente dados do Banco
-
-// Esta função *obterDadosGrafico* busca os últimos dados inseridos em tabela de medidas.
-// para, quando carregar o gráfico da primeira vez, já trazer com vários dados.
-// A função *obterDadosGrafico* também invoca a função *plotarGrafico*
-
-//     Se quiser alterar a busca, ajuste as regras de negócio em src/controllers
-//     Para ajustar o "select", ajuste o comando sql em src/models
-function obterDadosGrafico(idUsuario) {
-    // alterarTitulo(idUsuario)
-
-    // if (proximaAtualizacao != undefined) {
-    //     clearTimeout(proximaAtualizacao);
+    // function alterarTitulo(idUsuario) {
+    //     var tituloAquario = document.getElementById("tituloAquario")
+    //     tituloAquario.innerHTML = "Últimas medidas de Temperatura e Umidade do <span style='color: #e6005a'>Aquário " + idUsuario + "</span>"
     // }
 
-    fetch(`/medidas/ultimas/${idUsuario}`, { cache: 'no-store' }).then(function (response) {
-        if (response.ok) {
-            response.json().then(function (resposta) {
-                console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
-                resposta.reverse();
+    // O gráfico é construído com três funções:
+    // 1. obterDadosGrafico -> Traz dados do Banco de Dados para montar o gráfico da primeira vez
+    // 2. plotarGrafico -> Monta o gráfico com os dados trazidos e exibe em tela
+    // 3. atualizarGrafico -> Atualiza o gráfico, trazendo novamente dados do Banco
 
-                plotarGrafico(resposta, idUsuario);
-            });
-        } else {
-            console.error('Nenhum dado encontrado ou erro na API');
-        }
-    })
-        .catch(function (error) {
-            console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
-        });
-}
+    // Esta função *obterDadosGrafico* busca os últimos dados inseridos em tabela de medidas.
+    // para, quando carregar o gráfico da primeira vez, já trazer com vários dados.
+    // A função *obterDadosGrafico* também invoca a função *plotarGrafico*
 
-// Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
-// Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
-// A função *plotarGrafico* também invoca a função *atualizarGrafico*
-function plotarGrafico(resposta, idUsuario) {
-    console.log('iniciando plotagem do gráfico...');
+    //     Se quiser alterar a busca, ajuste as regras de negócio em src/controllers
+    //     Para ajustar o "select", ajuste o comando sql em src/models
+    function obterDadosGrafico(idUsuario) {
+        // alterarTitulo(idUsuario)
 
-    var dados = {
-        labels: [],
-        datasets: [
-            {
-                label: 'Umidade',
-                borderColor: '#32B9CD',
-                backgroundColor: '#32b9cd8f',
-                fill: true,
-                data: []
+        // if (proximaAtualizacao != undefined) {
+        //     clearTimeout(proximaAtualizacao);
+        // }
+
+        fetch(`/medidas/ultimas/${idUsuario}`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                    resposta.reverse();
+
+                    plotarGrafico(resposta, idUsuario);
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
             }
-        ]
-    };
-
-    for (i = 0; i < resposta.length; i++) {
-        var registro = resposta[i];
-        dados.labels.push(registro.nomeFilme);
-        dados.datasets[0].data.push(registro.voto);
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
     }
 
-    console.log(JSON.stringify(dados));
+    // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
+    // Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
+    // A função *plotarGrafico* também invoca a função *atualizarGrafico*
+    function plotarGrafico(resposta, idUsuario) {
+        console.log('iniciando plotagem do gráfico...');
 
-    var ctx = document.getElementById('canvas_grafico').getContext('2d');
-var chart = new Chart(ctx, {
-    // The type of chart we want to create
-    type: 'bar',
+        var dados = {
+            type: 'bar',
+            labels: [],
+                datasets: [{
+                    label: 'Votação',
+                    backgroundColor: ['grey','red','green', 'blue','yellow', 'purple', 'orange', 'pink', 'gray', 'black', 'violet'],
+                    borderColor: [],
+                    data: [],
+                }]
+        };
 
-    // The data for our dataset
-    data: {
-        labels: [],
-        datasets: [{
-            label: 'My First dataset',
-            backgroundColor: ['rgb(255, 99, 132)','red','green', 'blue','yellow', 'purple', 'orange', 'pink', 'gray', 'black', 'violet'],
-            borderColor: ['rgb(255, 99, 132)','red','green', 'blue','yellow', 'purple', 'orange', 'pink', 'gray', 'black', 'violet' ],
-            data: [0, 10, 30],
-        }]
-    },
+        for (i = 0; i < resposta.length; i++) {
+            var registro = resposta[i];
+            dados.labels.push(registro.nomeFilme);
+            dados.datasets[0].data.push(registro.voto);
+        }
 
-    // Configuration options go here
-    options: {}
-});
-    // var ctx = canvas_grafico.getContext('2d');
-    // window.grafico_linha = Chart.line(ctx, {
-    //     data: dados,
-    //     options: {
-    //         responsive: true,
-    //         animation: { duration: 500 },
-    //         hoverMode: 'index',
-    //         stacked: false,
-    //         title: {
-    //             display: false,
-    //             text: 'Dados capturados'
-    //         },
-    //         scales: {
-    //             yAxes: [{
-    //                 type: 'bar',
-    //                 display: true,
-    //                 position: 'left',
-    //                 id: 'y-temperatura',
-    //                 ticks: {
-    //                     beginAtZero: true,
-    //                     max: 100,
-    //                     min: 0
-    //                 }
-    //             }],
-    //         }
-    //     }
-    // });
+        console.log(JSON.stringify(dados));
 
-    // setTimeout(() => atualizarGrafico(idUsuario, dados), 2000);
-}
+        var ctx = document.getElementById('canvas_grafico').getContext('2d');
+        window.myChart = new Chart(ctx, {
+            type: "bar",
+            data: dados,
+            options: {
+                scales: {
+                    yAxes: [
+                        {
+                            ticks: {
+                                beginAtZero: true,
+                            },
+                        },
+                    ],
+                },
+            },
+        });
+        // var ctx = canvas_grafico.getContext('2d');
+        // window.grafico_linha = Chart.line(ctx, {
+        //     data: dados,
+        //     options: {
+        //         responsive: true,
+        //         animation: { duration: 500 },
+        //         hoverMode: 'index',
+        //         stacked: false,
+        //         title: {
+        //             display: false,
+        //             text: 'Dados capturados'
+        //         },
+        //         scales: {
+        //             yAxes: [{
+        //                 type: 'bar',
+        //                 display: true,
+        //                 position: 'left',
+        //                 id: 'y-temperatura',
+        //                 ticks: {
+        //                     beginAtZero: true,
+        //                     max: 100,
+        //                     min: 0
+        //                 }
+        //             }],
+        //         }
+        //     }
+        // });
+
+        // setTimeout(() => atualizarGrafico(idUsuario, dados), 2000);
+    }
 
 
 // Esta função *atualizarGrafico* atualiza o gráfico que foi renderizado na página,
@@ -236,4 +232,4 @@ var chart = new Chart(ctx, {
 
 //     Se quiser alterar a busca, ajuste as regras de negócio em src/controllers
 //     Para ajustar o "select", ajuste o comando sql em src/models
-  </script>
+</script>
