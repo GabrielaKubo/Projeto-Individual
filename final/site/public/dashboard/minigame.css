@@ -73,23 +73,58 @@ a:before {
     width: 100vw;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     color: white;
  }
- .inicio{
-    height: 60%;
+ input{
     width: 50%;
+    height: 10%;
+    font-size: 20px;
+    padding: 10px;
+    margin-left: 20%;
+    margin-top: 3%;
+ }
+ select{
+    width: 30%;
+    font-size: 20px;
+    padding: 10px;
+ }
+ .instrucao{
+    height: 90%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .botoes_style{
+    height: 100%;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .funcoes{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+ }
+ .start{
+    height: 90vh;
+    width: 100vw;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+
  }
  p{
     font-size: 25px;
  }
  img{
     height: 300px;
+    margin-top: 3%;
  }
  .select_game{
     margin-top: 2%;
@@ -98,14 +133,53 @@ a:before {
     margin-top: 2%;
     border-radius: 40px;
    border: 1px solid #abbe6c;
-    height: 40%;
-    width: 30%;
+    height: 60%;
+    width: 40%;
     font-size: 20px;
     transition-duration: 0.4s;
  }
 .btn_jogar:hover{
     background-color: #abbe6c;
     color: white;
+}
+.btn_confirmar{
+   margin-top: 2%;
+   border-radius: 40px;
+  border: 1px solid #abbe6c;
+   height: 60%;
+   width: 30%;
+   font-size: 20px;
+   transition-duration: 0.4s;
+}
+.btn_confirmar:hover{
+   background-color: #abbe6c;
+   color: white;
+}
+.btn_encerrar{
+   margin-top: 2%;
+   border-radius: 40px;
+  border: 1px solid #abbe6c;
+   height: 60%;
+   width: 30%;
+   font-size: 20px;
+   transition-duration: 0.4s;
+}
+.btn_encerrar:hover{
+   background-color: #abbe6c;
+   color: white;
+}
+.btn_dica{
+   margin-top: 2%;
+   border-radius: 40px;
+  border: 1px solid #abbe6c;
+   height: 60%;
+   width: 30%;
+   font-size: 20px;
+   transition-duration: 0.4s;
+}
+.btn_dica:hover{
+   background-color: #abbe6c;
+   color: white;
 }
 .select_game{
    height: 5%;

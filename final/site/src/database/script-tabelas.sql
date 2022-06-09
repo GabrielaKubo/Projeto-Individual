@@ -4,6 +4,7 @@
 /* para workbench - local - desenvolvimento */
 CREATE DATABASE ma;
 USE ma;
+
 CREATE TABLE Filmes(
 idFilmes int primary key auto_increment,
 nomeFilme VARCHAR(50),
@@ -104,16 +105,16 @@ INSERT INTO Filmes VALUES
  
  INSERT INTO Distribuidora VALUES
 (null, 'Toei Company','	¥ 180 milhões', 1),
-(null, 'Toei Company','US$ 15,5milhões', 2),
-(null,'Toei Company','US$ 45,1milhões', 3),
+(null, 'Sato Company','US$ 15,5milhões', 2),
+(null,'Osaka Company','US$ 45,1milhões', 3),
 (null, 'Toho','US$ 516,9milhões',4),
-(null, 'Toei Company','¥ 800 milhões',5),
-(null, 'Toho','	US$ 59 milhões',6),
-(null, 'Toho','US$ 159,4 milhões',7),
-(null, 'Toho','US$ 347,7 milhões',8),
-(null, 'Toho', 'US$ 236 milhões',9),
-(null, 'Toho', 'US$ 202,5 milhões',10),
-(null, 'Toho', 'US$ 136.454.220', 11);
+(null, 'Tonbo Company','¥ 800 milhões',5),
+(null, 'Tokyo','	US$ 59 milhões',6),
+(null, 'Sapporo','US$ 159,4 milhões',7),
+(null, 'Ginza','US$ 347,7 milhões',8),
+(null, 'Yamanashi', 'US$ 236 milhões',9),
+(null, 'Aomori', 'US$ 202,5 milhões',10),
+(null, 'Chiba', 'US$ 136.454.220', 11);
 
 INSERT INTO Usuario (idUsuario, nomeUser, email, senha, fkFilmes, fkPersonagem) Values
  (null, 'Gabriela','gabriela@email','123',7 , 23);
