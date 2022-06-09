@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <script src="js/cadastro.js"></script>
+    <link rel="shortcut icon" href="css/stickers/icon.png" type="image/x-icon">
+</head>
+<body>
+    <div class="header">
+        <div class="div_logo">
+            <h1 class="japones-logo">ジブリと間 </h1>
+            <h1 class="logo_romaji">Ghibli & MA</h1>
+        </div>
+        <ul>
+            <li class="under"><a href="index.html#home">Home</a> </li>
+            <li class="grow" ><a href="index.html#sobre">Sobre</a> </li>
+            <li class="grow"><a href="index.html#estudio">Estúdio</a> </li>
+            <li><a href="index.html#hayao_miyazaki">Miyazaki</a></li>
+            <li><a>|</a> </li>
+            <li class="grow" id="cadastro"><a href="cadastro.html">Cadastro</a> </li>
+            <li class="grow" id="login"><a href="login.html">Login</a> </li>
+        </ul>
+    </div>
+    <div class="banner-cadastro">
+        <div class="cadastro-card">
+            <div class="cadastro-container">
+                <h1>Seja Bem Vindo!</h1>
+            
+                <p>Nome completo:</p>
+                <input type="text" id="ipt_nome" class="nome" placeholder="Insira seu nome">
+                <p>E-mail:</p>
+                <input type="text" id="ipt_email" class="email" placeholder="Insira seu e-mail">
+                <p>Senha:</p>
+                <input type="password" id="ipt_senha" class="senha" placeholder="Insira sua senha">
+                <p>Confirmar senha:</p>
+                <input type="password" id="ipt_senha_confirmacao" class="confirmar_senha" placeholder="Confirme sua senha">
+                <p>Filme e Personagem Favorito:</p>
+                <div id="select" class="sel_FilmePerso">
+                    <select id="TodosFilmes" class="selfilme">
+                        <option value="0">--Selecione um filme--</option>
+                        <option value="1"> Nausicaa do Vale do Vento 🛩️</option>
+                        <option value="2">O Castelo no Céu 🏰</option>
+                        <option value="3">Meu Amigo Totoro 🍃</option>
+                        <option value="4">Túmulo dos Vagalumes 🍬</option>
+                        <option value="5">O serviço de Entregas da Kiki 🧹</option>
+                        <option value="6">Porco Rosso: O Último Heróis Romântico 🏖️</option>
+                        <option value="7">Princesa Mononoke 🌲</option>
+                        <option value="8">A Viagem de Chihiro 🐉</option>
+                        <option value="9">O Castelo Animado ⭐</option>
+                        <option value="10">Ponyo: Uma Amizade que Veio do Mar 🌊</option>
+                        <option value="11">Vidas ao Vento 🛫</option>
+                    </select>
+                          <select id="TodosPersonagens" class="selperso">
+                            <option>Selecione um Personagem</option>
+                            <option value="1">Kushana 🛩️</option>
+                            <option value="2">Nausicaa 🛩️</option>
+                            <option value="3">Asbel 🛩️</option>
+                            <option value="4">Yupa 🛩️</option>
+                            <option value="5">Sheeta 🏰</option>
+                            <option value="6">Dola 🏰</option>
+                            <option value="7">Pazu 🏰</option>
+                            <option value="8">Muska 🏰</option>
+                            <option value="9">Totoro 🍃</option>
+                            <option value="10">Mei Kusakabe 🍃</option>
+                            <option value="11">Satsuki Kusakabe 🍃</option>
+                            <option value="12">Catbus 🍃</option>
+                            <option value="13">Seita 🍬</option>
+                            <option value="14">Setsuko 🍬</option>
+                            <option value="15">Jiji 🧹</option>
+                            <option value="16">Tombo 🧹</option>
+                            <option value="17">Ursula 🧹</option>
+                            <option value="18">Kiki 🧹</option>
+                            <option value="19">Gina 🏖️</option>
+                            <option value="20">Porco Rosso 🏖️</option>
+                            <option value="21">Fio Piccolo 🏖️</option>
+                            <option value="22">Ashitaka 🌲</option>
+                            <option value="23">San 🌲</option>
+                            <option value="24">Moro 🌲</option>
+                            <option value="25">Lady Eboshi 🌲</option> 
+                            <option value="26">Chihiro Ogino 🐉</option>
+                            <option value="27">Haku 🐉</option>
+                            <option value="28">Lin 🐉</option>
+                            <option value="29">Sem Rosto 🐉</option>
+                            <option value="30">Sophie Hatter ⭐</option>
+                            <option value="31">Howl ⭐</option>
+                            <option value="32">Calcifer ⭐</option>
+                            <option value="33">Cabeça de Nabo ⭐</option>
+                            <option value="34">Markl ⭐</option>              
+                            <option value="35">Sosuke 🌊</option>
+                            <option value="36">Ponyo 🌊</option>
+                            <option value="37">Lisa 🌊</option>
+                            <option value="38">Fujimoto 🌊</option>
+                            <option value="39">Granmamare 🌊</option>
+                            <option value="40">Nahoko Satomi 🛫</option>
+                            <option value="41">Jiro Horikoshi 🛫</option>
+                            <option value="42">Honjo 🛫</option>
+                          </select>
+                </div>
+                
+                <div class="cadastro-end">
+                    <button onclick="cadastrar()" class="btn_cadastro">Cadastrar</button>
+                    <img src="css/galeria/pngegg.png" class="foto-cadastro">
+                </div>
+            </div>
+        </div>
+        <div id="erro" class="erro_card" style="display: none;"></div>
+       
+    </div>
+    <div id="footer" class="footer_page">
+        <div id="instagram_logo" class="insta_logo" onclick="change_window()">
+            <img src="css/galeria/logotipo-do-instagram.png" alt="">
+        </div>
+        <div>Feito com carinho por um aluno da SPTech.</div>
+    </div>
+</body>  
+</html>
+<script>
+    function cadastrar(){
+        var filmeVar = TodosFilmes.value;
+        var personagemVar = Number(TodosPersonagens.value);
+        var nomeVar = ipt_nome.value;
+        var emailVar = ipt_email.value;
+        var senhaVar = ipt_senha.value;
+        var confirmacaoVar = ipt_senha_confirmacao.value;
+        if(nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoVar == ""){
+            erro.style.display = "block"
+            erro.innerHTML = `Por favor, preencha todos os campos!`;
+        }
+        else if(emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1){
+            erro.style.display = "block"
+            erro.innerHTML = `E-mail inválido`;
+        }
+        else if(senhaVar != confirmacaoVar){
+            erro.style.display = "block"
+            erro.innerHTML = `Senhas diferentes, por favor insira senhas iguais para continuar!`;
+        }else{
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                filmeServer: filmeVar,
+                nomeServer: nomeVar,
+                emailServer: emailVar,
+                senhaServer: senhaVar,
+                persoServer: personagemVar
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                alert('Cadastro realizado com sucesso!!')
+                window.location = "login.html";
+                limparFormulario();
+                finalizarAguardar();
+            } else {
+                throw ("ERRO ao realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
+
+        return false;
+    }
+}
+    function sumirMensagem() {
+        erro.style.display = "none"
+    }
+    </script>
