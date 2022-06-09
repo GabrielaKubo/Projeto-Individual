@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="minigame.css">
+</head>
+<body>
+    <div class="header_minigame">
+        <div class="div_logo">
+            <h1 class="japones-logo">ジブリと間 </h1>
+            <h1 class="logo_romaji">Ghibli & MA</h1>
+        </div>
+        <ul>
+            <li class="#"><a href="info.html">Info</a> </li>
+            <li class="now" ><a href="Filmografia.html">Filmografia</a> </li>
+            <li class="#"><a href="Votacao.html">Votação</a> </li>
+            <li class="#"><a href="minigame.html">Minigame</a></li>
+            <li><a>|</a> </li>
+            <li class="#" id="Sair" onclick="limparSessao()"><a href="">Sair</a> </li>
+        </ul>
+    </div>
+    <div class="banner_minigame">
+        <div class="inicio">
+            <h1>Minigame</h1>
+        <div id="instrucao" style="display: block;">
+            <p>Escolha a quais filmes as cenas pertencem.</p>
+            <button class="btn_jogar" onclick="jogar()">Jogar</button>
+        </div>
+    </div>
+        <select name="" id="sel_cenas" style="display: none;" onchange="selecao()">
+            <option value="0">--Selecione uma cena--</option>
+            <option value="1">Cena 1</option>
+            <option value="2">Cena 2</option>
+            <option value="3">Cena 3</option>
+            <option value="4">Cena 4</option>
+        </select>
+        <div id="fotos">
+            <img id="chihiro_img" src="galeria-filmes/chihiro.gif" alt="" style="display: none;">
+            <img  id="totoro_img" src="galeria-filmes/totoro.gif" alt="" style="display: none;">
+            <img id="mononoke_img" src="galeria-filmes/mononoke.gif" alt="" style="display: none;">
+            <img id="ponyo_img" src="galeria-filmes/ponyo.gif" alt="" style="display: none;">
+        </div>
+        <div id="botoes" style="display: none;">
+            <input type="text" placeholder="nome do filme" id="filme_nome_decisao">
+            <button onclick="confirmar()" id="decisao">Confirmar</button>
+            <button onclick="encerrar()">Pontuação</button>
+            <button onclick="dica()">Dicas</button>
+        </div>
+        
+        <!-- <div id="game_img" class="img_game">
+            <img id="chihiro_img" src="galeria-filmes/chihiro.gif" alt="" style="display: block;">
+            <img  id="totoro_img" src="galeria-filmes/totoro.gif" alt="" style="display: none;">
+            <img id="mononoke_img" src="galeria-filmes/mononoke.gif" alt="" style="display: none;">
+            <img id="ponyo_img" src="galeria-filmes/ponyo.gif" alt="" style="display: none;">
+            <div id="parabens" style="display: none;">Parabéns você chegou ao final do jogo!!!</div>
+        </div> -->
+        <!-- <select  id="sel_game" class="select_game">
+            <option value="1">Chihiro</option>
+            <option value="2">Mononoke</option>
+            <option value="3">Ponyo</option>
+            <option value="4">Totoro</option>
+        </select> -->
+        <button class="btn_minigame" onclick="jogo()" style="display: none;">Confirmar</button>
+    </div>
+    <div id="footer" class="footer_page">
+        <div>Feito com carinho por um aluno da SPTech.</div>
+        <div class="by">By: Gabriela Akemi Kubo</div>
+    </div>
+</body>
+</html>
+<script>
+    function jogar(){
+        instrucao.style.display = "none";
+        sel_cenas.style.display = "block";
+    }
+    var cenas = 0;
+    function selecao(){
+        cenas = Number(sel_cenas.value);
+            if(cenas == 1){
+                chihiro_img.style.display = "block"; 
+                totoro_img.style.display = "none";  
+                mononoke_img.style.display = "none";
+                ponyo_img.style.display = "none";
+                botoes.style.display = "block";
+            }
+            else if(cenas == 2){
+                chihiro_img.style.display = "none"; 
+                totoro_img.style.display = "block";
+                mononoke_img.style.display = "none";
+                ponyo_img.style.display = "none";
+                botoes.style.display = "block";
+
+            }else if(cenas == 3){
+                chihiro_img.style.display = "none"; 
+                totoro_img.style.display = "none";  
+                mononoke_img.style.display = "block";
+                ponyo_img.style.display = "none";
+                botoes.style.display = "block";
+
+            }else if(cenas==4){
+                chihiro_img.style.display = "none"; 
+                totoro_img.style.display = "none";  
+                mononoke_img.style.display = "none";
+                ponyo_img.style.display = "block";
+                botoes.style.display = "block";
+            }else{
+                alert('Por Favor, selecione uma cena❗');
+                chihiro_img.style.display = "none"; 
+                totoro_img.style.display = "none";  
+                mononoke_img.style.display = "none";
+                ponyo_img.style.display = "none";
+            }
+    }
+    var decisao = 0;
+    var contador = 0;
+    function dica(){
+       
+        if(cenas == 1 &&  decisao != 'CHIHIRO'){
+            alert('Filme lançado em 2001 e recebeu o oscar de melhor filme de animação')
+        }else if(cenas == 2 && decisao != 'TOTORO'){
+            alert('Filme cujo personagem se tornou a logo do estúdio')
+        }else if(cenas == 3 && decisao != 'MONONOKE HIME'){
+            alert('Filme que engloba a natureza e a exploração predatória humana')
+        }else if(cenas == 4 && decisao != 'PONYO'){
+            alert('Filme no qual, um ser do mar se apaixona por um humano')
+        }
+        else {
+            alert('Quase')
+        }
+        }
+    function encerrar(){
+        if(decisao == 0){
+            alert('Por favor, insira o nome do filme')
+        }else{
+        alert(`Parabéns, sua pontuação foi ${contador}`)
+        }
+    }
+    function confirmar(){
+        decisao = filme_nome_decisao.value.toUpperCase();
+        if(cenas == 1 &&  decisao == 'CHIHIRO'){
+            alert('Parabéns ✨')
+            contador++;
+            chihiro_img.style.display = 'none';
+            botoes.style.display = 'none';
+        }else if(cenas == 2 && decisao == 'TOTORO'){
+            alert('Parabéns ✨')
+            contador++;
+           totoro_img.style.display = 'none';
+            botoes.style.display = 'none';
+        }else if(cenas == 3 && decisao == 'MONONOKE HIME'){
+            alert('Parabéns ✨')
+            contador++;
+            mononoke_img.style.display = 'none';
+            botoes.style.display = 'none';
+        }else if(cenas == 4 && decisao == 'PONYO'){
+            alert('Parabéns ✨')
+            contador++;
+            ponyo_img.style.display = 'none';
+            botoes.style.display = 'none';
+        }
+        else if( decisao == 0) {
+            alert('Por favor, insira o nome do filme')
+        }else{
+            alert('Tente novamente')
+        }
+    }
+</script>

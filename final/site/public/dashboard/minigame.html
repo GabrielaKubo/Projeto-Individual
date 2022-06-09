@@ -31,6 +31,7 @@
             <img  id="totoro_img" src="galeria-filmes/totoro.gif" alt="" style="display: none;">
             <img id="mononoke_img" src="galeria-filmes/mononoke.gif" alt="" style="display: none;">
             <img id="ponyo_img" src="galeria-filmes/ponyo.gif" alt="" style="display: none;">
+            <div id="parabens" style="display: none;">Parabéns você chegou ao final do jogo!!!</div>
         </div>
         <select  id="sel_game" class="select_game">
             <option value="1">Chihiro</option>
@@ -50,7 +51,7 @@
     // ARRUMAR
     var escolha;
         function jogo(){
-        var escolha = sel_game.value;
+        var escolha = Number(sel_game.value);
         var imagem= []
         for(var index = 0; index < 4; index++){
             if(index == 0 &&  escolha == 1){
@@ -59,6 +60,7 @@
                 totoro_img.style.display = "block";
                 mononoke_img.style.display = "none";
                 ponyo_img.style.display = "none";
+                break
                
             }
             else if(index == 1 && escolha == 4){
@@ -78,6 +80,7 @@
             }
             else if(index == 3 && escolha == 3){
                 alert('Parabéns');
+                parabens.style.display = "block";
                 chihiro_img.style.display = "none";
                 totoro_img.style.display = "none";
                 mononoke_img.style.display = "none";

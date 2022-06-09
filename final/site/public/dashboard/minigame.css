@@ -37,17 +37,6 @@ a:before {
     align-items: center;
     background-color: black;
  }
- /* .header{
-    position: fixed;
-    display: flex;
-    justify-content: flex-end;
-    justify-content: left;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0);
-    height: 15%;
-    width: 100vw;
-    padding: 20px;
- } */
  .header_minigame .div_logo{
     display: flex;
     
@@ -77,6 +66,7 @@ a:before {
     color: white;
     font-size: 20px;
  }
+ /* MINIGAME */
  .banner_minigame{
     background-image: url("galeria-filmes/ponte.jpg");
     height: 90vh;
@@ -85,23 +75,35 @@ a:before {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: white;
+ }
+ .inicio{
+    height: 60%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+ }
+ p{
+    font-size: 25px;
  }
  img{
-    height: 400px;
+    height: 300px;
  }
  .select_game{
     margin-top: 2%;
  }
- .btn_minigame{
+ .btn_jogar{
     margin-top: 2%;
     border-radius: 40px;
    border: 1px solid #abbe6c;
-    height: 10%;
-    width: 10%;
+    height: 40%;
+    width: 30%;
     font-size: 20px;
     transition-duration: 0.4s;
  }
-.btn_minigame:hover{
+.btn_jogar:hover{
     background-color: #abbe6c;
     color: white;
 }
