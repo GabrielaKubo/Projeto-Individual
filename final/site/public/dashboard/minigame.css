@@ -90,6 +90,14 @@ a:before {
     font-size: 20px;
     padding: 10px;
  }
+ .inicio{
+    height: 60%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+ }
  .instrucao{
     height: 90%;
     width: 100%;
@@ -117,6 +125,7 @@ a:before {
     justify-content: center;
     align-items: center;
     justify-content: space-evenly;
+    margin-bottom: 10%;
 
  }
  p{
@@ -137,6 +146,7 @@ a:before {
     width: 40%;
     font-size: 20px;
     transition-duration: 0.4s;
+    margin-left: 30%;
  }
 .btn_jogar:hover{
     background-color: #abbe6c;
